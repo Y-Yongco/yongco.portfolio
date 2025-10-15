@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Box Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .color-section {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .color-box {
+      width: 200px;
+      height: 200px;
+      margin: 1.5rem auto;
+      border-radius: 12px;
+      background-color: #4a90e2;
+      transition: background-color 0.4s ease;
+    }
+
+    .color-button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .color-button:hover {
+      background-color: #4a90e2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Color Box Interaction</h1>
+    <p>Demonstrating JavaScript Functionality</p>
+  </div>
+
+  <div class="container color-section">
+    <div class="color-box" id="colorBox"></div>
+    <button class="color-button" onclick="changeColor()">Change Color</button>
+    <br><br>
+    <a href="index.html" class="color-button">Back to Portfolio</a>
+  </div>
+
+  <script>
+    function changeColor() {
+      const box = document.getElementById("colorBox");
+      const colors = ["#e74c3c", "#2ecc71", "#f1c40f", "#9b59b6", "#1abc9c", "#e67e22"];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      box.style.backgroundColor = randomColor;
+    }
+  </script>
+
+</body>
+</html>
