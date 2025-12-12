@@ -1,0 +1,12 @@
+open powershell and run this command if you start this program for the first time
+cd C:\project\trashscan-backend; mvn clean install
+
+run backend
+cd C:\project\trashscan-backend; mvn spring-boot:run
+
+run frontend
+cd C:\project\frontend; npm run dev or cd C:\project\frontend; npm install; npm run dev (if you run the program for the first time
+
+kill running tasks / end program
+taskkill /IM "node.exe" /F
+taskkill /IM "java.exe" /F

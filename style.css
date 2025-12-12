@@ -178,6 +178,22 @@ body {
   background: var(--accent);
 }
 
+/* Projects Section */
+.project-button {
+  background: var(--button-bg);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.project-button:hover {
+  background: var(--accent);
+}
+
 /* Responsive */
 @media (max-width: 600px) {
   .header h1 {

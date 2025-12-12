@@ -1,0 +1,25 @@
+{
+    "name": "trashscan-frontend",
+    "version": "1.0.0",
+    "description": "Frontend for TrashScan - Smart Waste Management",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "axios": "^1.6.7",
+        "chart.js": "^4.4.9",
+        "express": "^4.17.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^5.5.0",
+        "react-router-dom": "^6.22.0"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-react": "^4.2.1",
+        "vite": "^6.3.5"
+    }
+}
