@@ -11,6 +11,7 @@
   <div class="header">
     <h1>Yuan Carlos D. Yongco</h1>
     <p>PROGRAMMER</p>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
   </div>
 
   <div class="container">
@@ -79,4 +80,36 @@
   </div>
 
 </body>
+<script>
+  (function(){
+    const toggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+    const stored = localStorage.getItem('theme');
+    function applyTheme(theme){
+      if(theme === 'dark'){
+        root.setAttribute('data-theme','dark');
+        toggle.textContent = '☀️';
+      } else {
+        root.removeAttribute('data-theme');
+        toggle.textContent = '🌙';
+      }
+    }
+
+    // initial theme: localStorage -> prefers-color-scheme -> light
+    if(stored){
+      applyTheme(stored);
+    } else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+      applyTheme('dark');
+    } else {
+      applyTheme('light');
+    }
+
+    toggle.addEventListener('click', function(){
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      const next = isDark ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem('theme', next);
+    });
+  })();
+</script>
 </html>
